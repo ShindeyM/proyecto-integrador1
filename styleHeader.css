@@ -36,13 +36,14 @@ nav > ul {
   align-items: center;
 }
 
-.ingresar p {
+.ingresar button {
   color: white;
   background-color: #5227cc;
   border: thick solid #5227cc;
   border-radius: 15px;
   padding-left: 10px;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
@@ -264,6 +265,16 @@ form {
   padding: 20px;
 }
 
+form input {
+  border: thin solid rgb(131, 130, 130);
+  border-radius: 5px;
+  height: 20px;
+}
+
+textarea {
+  border-radius: 5px;
+}
+
 .nombre-apellido,
 .email,
 .solicitud {
@@ -279,6 +290,8 @@ form {
   padding: 5px;
   margin-top: 0;
   align-self: center;
+  cursor: pointer;
+  box-shadow: 2px 4px 5px gray;
 }
 
 @media screen and (min-width: 1024px) {
@@ -317,3 +330,142 @@ form {
 }
 
 /* --------------------------------FOOTER------------------------------------- */
+
+/* --------------------------------MODAL----------------------------------------- */
+
+.modal-contenedor {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border-radius: 10px;
+  width: 90vw;
+  height: fit-content;
+  background-color: whitesmoke;
+}
+
+.modal-foto {
+  background-image: url(./SenpaiProyecto1/Materiales/imagen-modal.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.modal-texto {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  width: 50%;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 10px 0 10px;
+}
+
+.modal-atras {
+  display: flex;
+  font-size: 10px;
+}
+
+.modal-atras img {
+  /* height: 12px; */
+  align-self: center;
+  padding-right: 5px;
+}
+
+.button {
+  border: none;
+  font-weight: 700;
+}
+
+.modal-titulo {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.modal-caja {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  width: 90%;
+  margin: 13px 10px;
+  box-shadow: 2px 4px 7px gray;
+}
+
+.caja-icono {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5298ff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 50%;
+}
+
+.caja-icono img {
+  filter: invert(100%) sepia(10%) saturate(451%) hue-rotate(110deg)
+    brightness(101%) contrast(94%);
+  width: 50%;
+  height: auto;
+}
+
+.caja-texto {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+  font-size: 11px;
+}
+
+.caja-texto h4 {
+  color: #5298ff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.caja-flecha {
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin-right: 5px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.violeta {
+  background-color: #7749f8;
+}
+
+.titulo-violeta h4 {
+  color: #7749f8;
+}
+
+.modal::backdrop {
+  background: linear-gradient(45deg, #5298ff, #7749f8);
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 600px) {
+  .modal-contenedor {
+    max-width: 50vw;
+  }
+
+  .caja-icono {
+    width: 30%;
+  }
+
+  .caja-texto {
+    font-size: 0.8rem;
+  }
+}

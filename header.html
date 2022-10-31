@@ -27,7 +27,7 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-      <div class="ingresar"><p>Ingresar</p></div>
+      <div class="ingresar open-button"><button>Ingresar</button></div>
 
       <!-- AVERIGUAR LO DEL MENU HAMBURGUESA -->
     </header>
@@ -304,5 +304,75 @@
         </div>
       </div>
     </section>
+
+    <dialog id="modal">
+      <div class="modal-contenedor">
+        <div class="modal-foto"></div>
+
+        <div class="modal-texto">
+          <div class="modal-head close-button">
+            <div class="modal-atras cursor">
+              <img
+                src="./SenpaiProyecto1/Materiales/icons8-izquierda-48.png"
+                alt="flechita"
+                width="13"
+              />
+              <p>volver</p>
+            </div>
+            <div class="modal-cerrar">
+              <button class="button cursor">X</button>
+            </div>
+          </div>
+
+          <div class="modal-titulo"><h3>Registrar</h3></div>
+
+          <div class="modal-caja">
+            <div class="caja-icono">
+              <img
+                src="./SenpaiProyecto1/Materiales/icons8-maleta-64.png"
+                alt="maletincito"
+              />
+            </div>
+
+            <div class="caja-texto">
+              <h4>Mi Empresa</h4>
+              <p>Breve explicacion a lo que nos referimos.</p>
+            </div>
+
+            <div class="caja-flecha cursor">
+              <img
+                src="./SenpaiProyecto1/Materiales/icons8-derecha-48.png"
+                alt="flecha"
+                width="13"
+              />
+            </div>
+          </div>
+
+          <div class="modal-caja">
+            <div class="caja-icono violeta">
+              <img
+                src="./SenpaiProyecto1/Materiales/icons8-contactos-32.png"
+                alt="usuario"
+              />
+            </div>
+
+            <div class="caja-texto titulo-violeta">
+              <h4>Mi organizacion</h4>
+              <p>estamos para ayudarlo a tener exito.</p>
+            </div>
+
+            <div class="caja-flecha cursor">
+              <img
+                src="./SenpaiProyecto1/Materiales/icons8-derecha-48.png"
+                alt="flecha"
+                width="13"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./modal.js"></script>
   </body>
 </html>
