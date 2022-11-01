@@ -12,28 +12,130 @@ body {
 
 /* --------------------------------HEADER------------------------------ */
 
-li {
+/* li {
   list-style: none;
-}
+} */
 
-header {
-  display: flex;
-  justify-content: space-evenly;
+.header {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-evenly; */
+  height: 30%;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
+  float: left;
+  margin-top: 20px;
+  margin-left: 15px;
 }
 
-nav > ul {
-  display: flex;
-  flex-direction: column;
+a {
+  color: black;
 }
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.header ul a {
+  display: block;
+  text-decoration: none;
+  outline: 1px solid gray;
+  padding: 20px;
+  border-right: 1px solid #aaa;
+}
+
+.header ul a:hover {
+  background-color: #ddd;
+}
+
+/* -----------------Hambuger Menu-------------------- */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  margin-left: 15%;
+  padding: 28px 20px;
+  position: relative;
+  cursor: pointer;
+  float: left;
+}
+
+.header .menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* ---------------------------------------------------- */
 
 .ingresar {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
+  float: right;
+  position: absolute;
+  left: 75%;
+  bottom: 93%;
+  justify-self: flex-end;
+  /* margin-bottom: 25px; */
+  margin-right: 15px;
 }
 
 .ingresar button {
@@ -47,25 +149,50 @@ nav > ul {
 }
 
 @media screen and (min-width: 1024px) {
-  header {
-    height: 70px;
-  }
-
-  nav {
-    width: 50%;
+  .header {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    height: 70px;
+    justify-content: flex-start;
   }
 
-  nav > ul {
+  .header .menu-icon {
+    display: none;
+  }
+
+  /* 
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+  */
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    margin-left: 15%;
+  }
+
+  ul {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
+    justify-self: center;
   }
 
-  nav > ul > li {
+  ul > li {
     padding: 0 40px;
+  }
+
+  .header ul a {
+    outline: none;
+    border-right: none;
+  }
+
+  .ingresar {
+    justify-self: flex-end;
+    align-self: center;
   }
 }
 
@@ -303,10 +430,11 @@ textarea {
   }
 
   .contacto-titulo {
-    margin-left: 45%;
+    margin-left: 50%;
   }
 
   .contacto-image {
+    margin-left: 5%;
     width: 50vw;
     height: 350px;
   }
@@ -317,15 +445,11 @@ textarea {
     font-size: 15px;
     padding: 20px;
     width: 100%;
-    margin-left: 20%;
+    margin-left: 5%;
   }
 
   .nombre-email-responsive {
     align-self: center;
-  }
-
-  .enviar {
-    margin-left: 30%;
   }
 }
 
@@ -451,8 +575,9 @@ textarea {
   color: #7749f8;
 }
 
-.modal::backdrop {
-  background: linear-gradient(45deg, #5298ff, #7749f8);
+#modal::backdrop {
+  /* background: linear-gradient(45deg, #5298ff, #7749f8); */
+  background: black;
   opacity: 0.8;
 }
 
