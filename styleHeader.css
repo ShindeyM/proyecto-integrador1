@@ -6,26 +6,21 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "DM Sans", sans-serif;
 }
 
 /* --------------------------------HEADER------------------------------ */
 
-/* li {
-  list-style: none;
-} */
-
 .header {
-  /* display: flex;
-  align-items: center;
-  justify-content: space-evenly; */
   height: 30%;
 }
 
 .logo {
-  /* display: flex;
-  align-items: center; */
   float: left;
   margin-top: 20px;
   margin-left: 15px;
@@ -46,16 +41,16 @@ a {
 .header ul a {
   display: block;
   text-decoration: none;
-  outline: 1px solid gray;
   padding: 20px;
-  border-right: 1px solid #aaa;
+  border-bottom: 1px solid rgb(82, 152, 255);
+  margin-bottom: 3px;
 }
 
 .header ul a:hover {
   background-color: #ddd;
 }
 
-/* -----------------Hambuger Menu-------------------- */
+/* -----------------Hamburger Menu-------------------- */
 
 .header .menu {
   clear: both;
@@ -124,17 +119,14 @@ a {
   top: 0;
 }
 
-/* ---------------------------------------------------- */
+/* ---------------------Fin hamburger menu/ Continuacion HEADER------------------------------ */
 
 .ingresar {
-  /* display: flex;
-  align-items: center; */
   float: right;
   position: absolute;
   left: 75%;
-  bottom: 93%;
+  bottom: 95%;
   justify-self: flex-end;
-  /* margin-bottom: 25px; */
   margin-right: 15px;
 }
 
@@ -148,55 +140,7 @@ a {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1024px) {
-  .header {
-    display: flex;
-    height: 70px;
-    justify-content: flex-start;
-  }
-
-  .header .menu-icon {
-    display: none;
-  }
-
-  /* 
-  .header li {
-    float: left;
-  }
-
-  .header li a {
-    padding: 20px 30px;
-  }
-  */
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-    margin-left: 15%;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-self: center;
-  }
-
-  ul > li {
-    padding: 0 40px;
-  }
-
-  .header ul a {
-    outline: none;
-    border-right: none;
-  }
-
-  .ingresar {
-    justify-self: flex-end;
-    align-self: center;
-  }
-}
-
-/* ---------------------------------INTRO--------------------------- */
+/* ---------------------------------INTRO manos-------------------------- */
 
 .hands-image {
   display: flex;
@@ -218,15 +162,339 @@ a {
   width: 70%;
 }
 
-@media screen and (min-width: 1024px) {
-  .hands-text {
-    font-size: larger;
-  }
+/* ------------------------------NOSOTROS---------------------------------- */
 
-  .hands-image {
-    height: 50vh;
-  }
+.elH {
+  position: relative;
+  bottom: 10px;
+  font-size: 1.4rem;
 }
+.elP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.P2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 13px;
+}
+
+.contenedor1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: rgb(82, 152, 255);
+  height: 100vh;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 65% 35%;
+  grid-area: contenedor1;
+}
+
+.nosotros1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.texto1 {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.4;
+  color: white;
+}
+
+.image1 {
+  border-color: orange;
+  border-style: solid;
+  border-radius: 1rem;
+  background-image: url("./SenpaiProyecto1/Materiales/oficina.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 270px;
+}
+
+.texto2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  line-height: 1.4;
+  color: white;
+}
+
+.image2 {
+  margin-bottom: 20px;
+  border-color: orange;
+  border-style: solid;
+  border-radius: 1rem;
+  grid-area: image2;
+  background-image: url("./SenpaiProyecto1/Materiales/voluntariado.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 270px;
+}
+
+/* ------------------------------OPORTUNIDADES---------------------------------- */
+
+.oportunidades {
+  height: 100%;
+  width: 100vw;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.seccion2 {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textoOportu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.voluntario {
+  color: white;
+  width: 250px;
+  height: 200px;
+  border-radius: 1rem;
+  background-color: #ff4b47;
+}
+
+.voluntario1 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contenedorMano {
+  width: 50%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorMas {
+  display: flex;
+  width: 15%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorPalabras {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.palabras {
+  font-size: 1.7rem;
+}
+
+.mas {
+  width: 20px;
+  height: 20px;
+}
+
+.mano {
+  width: 37px;
+}
+
+.donar {
+  color: white;
+  left: 75px;
+  width: 250px;
+  height: 200px;
+  grid-area: donar;
+  border-radius: 1rem;
+  background-color: #ffa500;
+}
+
+.reciclar {
+  color: white;
+  left: 75px;
+  width: 250px;
+  height: 200px;
+  grid-area: reciclar;
+  border-radius: 1rem;
+  background-color: #00aa3d;
+}
+
+.reciclar1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contenedorReci {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 120px;
+}
+
+.contenedorMas2 {
+  display: flex;
+  width: 15%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorPalabras2 {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+}
+
+.laboral {
+  color: white;
+  left: 75px;
+  width: 250px;
+  height: 200px;
+  border-radius: 1rem;
+  background-color: #2cc5d0;
+}
+
+.donar1 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contenedorMano1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.contenedorMas1 {
+  display: flex;
+  width: 15%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorPalabras1 {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.mas1 {
+  width: 20px;
+  height: 20px;
+}
+
+.mano1 {
+  width: 70px;
+}
+
+.palabras1 {
+  font-size: 1.7rem;
+}
+
+.reci {
+  width: 3.7rem;
+}
+
+.palabras2 {
+  font-size: 1.7rem;
+}
+.mas2 {
+  width: 20px;
+  height: 20px;
+}
+
+.maletin {
+  width: 50%;
+}
+
+.laboral1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contenedorMaletin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 50%;
+}
+
+.contenedorMas3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 50px;
+}
+
+.palabras3 {
+  font-size: 1.7rem;
+}
+
+.contenedorPalabras3 {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+.mas3 {
+  width: 20px;
+  height: 20px;
+}
+
+.encuentra {
+  font-size: 1.2rem;
+}
+
+.parrafo {
+  width: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
 /* ------------------------------NOTICIAS---------------------------------- */
 
 #noticias {
@@ -234,10 +502,10 @@ a {
   flex-direction: column;
   align-items: center;
   background-color: #5298ff;
-  /* width: 100%; */
   height: fit-content;
   padding: 30px;
   font-size: 13px;
+  margin-top: 30px;
 }
 
 .noticias-responsive {
@@ -265,7 +533,6 @@ a {
   height: 100%;
   margin: 3px;
   font-size: 8px;
-  /* padding-top: 15px; */
   padding-bottom: 10px;
   border-radius: 5px;
   background-color: whitesmoke;
@@ -327,36 +594,9 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  /* position: relative;
-  left: 80%;
-  bottom: 0; */
 }
 
-@media screen and (min-width: 1024px) {
-  .noticias-responsive {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* width: 100%; */
-    /* height: fit-content; */
-    padding: 30px;
-    font-size: 13px;
-  }
-  .noticias-titulo {
-    font-size: 2rem;
-  }
-
-  .mini-noticia {
-    height: 300px;
-  }
-
-  .noticia-texto {
-    font-size: 0.7rem;
-    line-height: normal;
-  }
-}
-
-/* -----------------------------CONTACTO------------------------------------------ */
+/* ----------------------------------CONTACTO------------------------------------------ */
 
 #contacto {
   display: flex;
@@ -421,41 +661,96 @@ textarea {
   box-shadow: 2px 4px 5px gray;
 }
 
-@media screen and (min-width: 1024px) {
-  .contacto-responsive {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    width: 100vw;
-  }
-
-  .contacto-titulo {
-    margin-left: 50%;
-  }
-
-  .contacto-image {
-    margin-left: 5%;
-    width: 50vw;
-    height: 350px;
-  }
-
-  .form-responsive {
-    display: flex;
-    flex-direction: row;
-    font-size: 15px;
-    padding: 20px;
-    width: 100%;
-    margin-left: 5%;
-  }
-
-  .nombre-email-responsive {
-    align-self: center;
-  }
-}
-
 /* --------------------------------FOOTER------------------------------------- */
 
-/* --------------------------------MODAL----------------------------------------- */
+.footer {
+  margin-top: 10px;
+  height: 100%;
+  border-radius: 10px;
+  color: white;
+  background-color: #5705ff;
+  display: flex;
+  flex-direction: column;
+}
+
+.nex {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+li .a {
+  text-decoration: none;
+}
+
+.redes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.face {
+  margin-right: 3px;
+  width: 20px;
+}
+
+.twit {
+  width: 20px;
+}
+
+.ig {
+  margin-left: 3px;
+  width: 20px;
+}
+
+.copyr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  height: 40px;
+  color: black;
+}
+
+.segui {
+  font-size: 15px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a {
+  color: white;
+}
+
+.linea {
+  margin-top: 20px;
+  border-top: white;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+}
+
+/* --------------------------------MODAL-------------------------------------- */
 
 .modal-contenedor {
   position: fixed;
@@ -500,7 +795,6 @@ textarea {
 }
 
 .modal-atras img {
-  /* height: 12px; */
   align-self: center;
   padding-right: 5px;
 }
@@ -576,10 +870,263 @@ textarea {
 }
 
 #modal::backdrop {
-  /* background: linear-gradient(45deg, #5298ff, #7749f8); */
   background: black;
   opacity: 0.8;
 }
+
+/* ------------------------------------------------MEDIA QUERY-------------------------------------------------- */
+
+@media (min-width: 1024px) {
+  /* -----------MEDIA HEADER---------- */
+  .header {
+    display: flex;
+    height: 70px;
+    justify-content: flex-start;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    margin-left: 15%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+  }
+
+  ul > li {
+    padding: 0 40px;
+  }
+
+  .header ul a {
+    outline: none;
+    border-bottom: none;
+  }
+
+  .ingresar {
+    justify-self: flex-end;
+    align-self: center;
+    bottom: 93%;
+  }
+
+  /* -------------MEDIA INTRO manos------------ */
+  .hands-text {
+    font-size: larger;
+  }
+
+  .hands-image {
+    height: 50vh;
+  }
+
+  /*---------------MEDIA Nosotros------------*/
+  .image1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    border-radius: 0;
+    border: none;
+  }
+  .texto1 {
+    width: 50%;
+  }
+
+  .imgtex1 {
+    height: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgtex2 {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    border: none;
+    width: 460px;
+  }
+  .texto2 {
+    width: 50%;
+  }
+
+  .elP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+
+  .P2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+
+  /*---------------MEDIA Oportunidades---------------*/
+  .seccion2 {
+    height: 50px;
+  }
+  .parrafo {
+    width: 60%;
+    height: 70px;
+  }
+  .oportunidades {
+    flex-direction: row;
+    height: 300px;
+  }
+
+  .voluntario {
+    flex-direction: row;
+    width: 200px;
+  }
+
+  .donar {
+    width: 200px;
+  }
+  .reciclar {
+    width: 200px;
+  }
+  .laboral {
+    width: 200px;
+  }
+
+  .contenedorPalabras3 {
+    width: 75%;
+  }
+
+  /* ---------------MEDIA NOTICIAS-------------- */
+  .noticias-responsive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    font-size: 13px;
+  }
+  .noticias-titulo {
+    font-size: 2rem;
+  }
+
+  .mini-noticia {
+    height: 300px;
+  }
+
+  .noticia-texto {
+    font-size: 0.7rem;
+    line-height: normal;
+  }
+
+  /* ---------------------MEDIA CONTACTO----------------- */
+  .contacto-responsive {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100vw;
+  }
+
+  .contacto-titulo {
+    margin-left: 50%;
+  }
+
+  .contacto-image {
+    margin-left: 5%;
+    width: 50vw;
+    height: 350px;
+  }
+
+  .form-responsive {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    padding: 20px;
+    width: 100%;
+    margin-left: 5%;
+  }
+
+  .nombre-email-responsive {
+    align-self: center;
+  }
+
+  /*-------------MEDIA footer------------ */
+  .footer {
+    border-radius: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .footer1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nex {
+    width: 35%;
+  }
+
+  .ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list {
+    width: 35%;
+    justify-content: flex-start;
+  }
+
+  li {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .contenedorRedes {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 35%;
+  }
+
+  .a {
+    font-size: 0.8rem;
+  }
+
+  .face {
+    width: 15px;
+  }
+
+  .twit {
+    width: 15px;
+  }
+
+  .ig {
+    width: 15px;
+  }
+
+  .segui {
+    font-size: 13px;
+  }
+}
+
+/* ----------MODAL-------- */
 
 @media screen and (min-width: 600px) {
   .modal-contenedor {
