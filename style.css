@@ -119,14 +119,17 @@ a {
   top: 0;
 }
 
-/* ---------------------Fin hamburger menu/ Continuacion HEADER------------------------------ */
+/* ------------------------FIN Hamburger Menu/ CONTINUACION HEADER---------------------------- */
 
 .ingresar {
+  /* display: flex;
+  align-items: center; */
   float: right;
   position: absolute;
   left: 75%;
   bottom: 95%;
   justify-self: flex-end;
+  /* margin-bottom: 25px; */
   margin-right: 15px;
 }
 
@@ -164,6 +167,7 @@ a {
 
 /* ------------------------------NOSOTROS---------------------------------- */
 
+/*Comienzo de seccion Nosotros*/
 .elH {
   position: relative;
   bottom: 10px;
@@ -247,6 +251,7 @@ a {
 
 /* ------------------------------OPORTUNIDADES---------------------------------- */
 
+/*Comienzo de seccion Oportunidades "Cards de colores"*/
 .oportunidades {
   height: 100%;
   width: 100vw;
@@ -257,7 +262,6 @@ a {
   align-items: center;
   margin-top: 20px;
 }
-
 .seccion2 {
   height: 10vh;
   display: flex;
@@ -328,6 +332,7 @@ a {
 
 .donar {
   color: white;
+
   left: 75px;
   width: 250px;
   height: 200px;
@@ -338,6 +343,7 @@ a {
 
 .reciclar {
   color: white;
+
   left: 75px;
   width: 250px;
   height: 200px;
@@ -345,14 +351,12 @@ a {
   border-radius: 1rem;
   background-color: #00aa3d;
 }
-
 .reciclar1 {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
 .contenedorReci {
   display: flex;
   flex-direction: column;
@@ -361,7 +365,6 @@ a {
   width: 50%;
   height: 120px;
 }
-
 .contenedorMas2 {
   display: flex;
   width: 15%;
@@ -369,7 +372,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 .contenedorPalabras2 {
   display: flex;
   width: 60%;
@@ -450,7 +452,6 @@ a {
   flex-direction: row;
   justify-content: space-between;
 }
-
 .contenedorMaletin {
   display: flex;
   flex-direction: column;
@@ -459,7 +460,6 @@ a {
   height: 120px;
   width: 50%;
 }
-
 .contenedorMas3 {
   display: flex;
   justify-content: center;
@@ -471,7 +471,6 @@ a {
 .palabras3 {
   font-size: 1.7rem;
 }
-
 .contenedorPalabras3 {
   display: flex;
   justify-content: center;
@@ -482,7 +481,6 @@ a {
   width: 20px;
   height: 20px;
 }
-
 .encuentra {
   font-size: 1.2rem;
 }
@@ -508,10 +506,43 @@ a {
   margin-top: 30px;
 }
 
-.noticias-responsive {
+.grande {
+  width: 400%;
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
+  transition: all 0.5s ease;
+  transform: translateX(-25%);
+}
+
+.puntos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.punto {
+  border-radius: 36px;
+  width: 2em;
+  height: 2em;
+  background-color: white;
+}
+
+.punto.activo {
+  background-color: rgb(165, 158, 158);
+}
+
+.noticias-responsive {
+  width: 100%;
+  max-width: 120em;
 }
 
 .noticias-titulo h3 {
@@ -529,7 +560,7 @@ a {
 .mini-noticia {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: calc(100% / 4);
   height: 100%;
   margin: 3px;
   font-size: 8px;
@@ -663,6 +694,7 @@ textarea {
 
 /* --------------------------------FOOTER------------------------------------- */
 
+/*Comienzo de la seccion Footer */
 .footer {
   margin-top: 10px;
   height: 100%;
@@ -679,7 +711,6 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-
 .list {
   display: flex;
   justify-content: center;
@@ -750,12 +781,12 @@ li .a {
   border-right: none;
 }
 
-/* --------------------------------MODAL-------------------------------------- */
+/* --------------------------------MODAL----------------------------------------- */
 
 .modal-contenedor {
   position: fixed;
-  top: 30%;
-  left: 50%;
+  top: 10%;
+  left: 20%;
   transform: translate(-50%, -50%);
   display: flex;
   border-radius: 10px;
@@ -874,10 +905,10 @@ li .a {
   opacity: 0.8;
 }
 
-/* ------------------------------------------------MEDIA QUERY-------------------------------------------------- */
+/* -------------------------------MEDIA QUERY---------------------------- */
 
 @media (min-width: 1024px) {
-  /* -----------MEDIA HEADER---------- */
+  /* ------------------MEDIA HEADER------------- */
   .header {
     display: flex;
     height: 70px;
@@ -916,7 +947,7 @@ li .a {
     bottom: 93%;
   }
 
-  /* -------------MEDIA INTRO manos------------ */
+  /* --------------MEDIA INTRO manos----------- */
   .hands-text {
     font-size: larger;
   }
@@ -925,7 +956,7 @@ li .a {
     height: 50vh;
   }
 
-  /*---------------MEDIA Nosotros------------*/
+  /*---------------------MEDIA Nosotros---------------*/
   .image1 {
     display: flex;
     justify-content: center;
@@ -978,7 +1009,7 @@ li .a {
     width: 70%;
   }
 
-  /*---------------MEDIA Oportunidades---------------*/
+  /*-------------------------MEDIA Oportunidades------------------*/
   .seccion2 {
     height: 50px;
   }
@@ -1010,7 +1041,7 @@ li .a {
     width: 75%;
   }
 
-  /* ---------------MEDIA NOTICIAS-------------- */
+  /* --------------------MEDIA NOTICIAS---------------- */
   .noticias-responsive {
     display: flex;
     flex-direction: row;
@@ -1025,13 +1056,25 @@ li .a {
   .mini-noticia {
     height: 300px;
   }
+  .puntos {
+    background-color: 0;
+    padding: 0;
+    width: 0;
+  }
+  .punto {
+    display: none;
+  }
+  .grande {
+    width: 100%;
+    transform: none;
+  }
 
   .noticia-texto {
     font-size: 0.7rem;
     line-height: normal;
   }
 
-  /* ---------------------MEDIA CONTACTO----------------- */
+  /* -----------------MEDIA CONTACTO------------- */
   .contacto-responsive {
     display: flex;
     flex-direction: row-reverse;
@@ -1062,7 +1105,7 @@ li .a {
     align-self: center;
   }
 
-  /*-------------MEDIA footer------------ */
+  /*----------------MEDIA FOOTER------------------ */
   .footer {
     border-radius: 0;
     border-bottom-left-radius: 30px;
@@ -1130,6 +1173,8 @@ li .a {
 
 @media screen and (min-width: 600px) {
   .modal-contenedor {
+    top: 30%;
+    left: 50%;
     max-width: 50vw;
   }
 
